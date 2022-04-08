@@ -13,7 +13,7 @@ class FSMAdmin(StatesGroup):
 
 async def download(message: types.Message):
     """This is method send document for admin"""
-    if message.chat.id in ADMIN_ID:
+    if str(message.chat.id) in ADMIN_ID:
         await message.reply_document(open('excel_py.xlsx', 'rb'))
     else:
         await message.reply('Эта функция Вам недоступна')
@@ -21,7 +21,7 @@ async def download(message: types.Message):
 
 async def create_new_document(message: types.Message):
     """This is method download document and create new document"""
-    if message.chat.id in ADMIN_ID:
+    if str(message.chat.id) in ADMIN_ID:
         inline_create = download_inline()
         try:
             await message.reply_document(open('excel_py.xlsx', 'rb'))

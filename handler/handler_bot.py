@@ -2,9 +2,6 @@ from aiogram import types, Dispatcher
 
 from help_file import dp, bot
 
-import sys
-sys.path.append('/tg_bot_for_audit/')
-
 async def command_start(message: types.Message):
     print('user start')
     await message.answer('Привет! Теперь я буду твоим синоптиком :)')

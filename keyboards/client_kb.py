@@ -19,13 +19,6 @@ def choice_yes_or_not():
     choice_column.insert(number_column)
     return choice_column
 
-# def choise_day():
-#     choice_column = InlineKeyboardMarkup(row_width=2)
-#     for name_column, number_column in zip(excel_method.read_column_header()[:1], range(1, len(excel_method.read_column_header()[1:]))):
-#         number_column = InlineKeyboardButton(text=name_column, callback_data=str(number_column))
-#         choice_column.insert(number_column)
-#     return choice_column
-
 def choice_day(name_iter_column: str):
     choice_column = InlineKeyboardMarkup(row_width=2)
     dataframe = read_all()

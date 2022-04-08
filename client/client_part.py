@@ -3,7 +3,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram import types, Dispatcher
 from aiogram.types.callback_query import CallbackQuery
 
-from help_file import dp, bot
+from help.help_file import dp, bot
 from keyboards.client_kb import choice_column_header_client, choice_yes_or_not, choice_day
 from pandas_test.excel_method import read_column_header_comment, change_cell, read_column_header
 
